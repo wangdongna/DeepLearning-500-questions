@@ -1,0 +1,66 @@
+常用导数公式
+　　1.y=c(c为常数) y'=0
+　　2.y=x^n y'=nx^(n-1)
+　　3.y=a^x y'=a^xlna
+　　y=e^x y'=e^x
+　　4.y=logax y'=logae/x
+　　y=lnx y'=1/x
+　　5.y=sinx y'=cosx
+　　6.y=cosx y'=-sinx
+　　7.y=tanx y'=1/cos^2x
+　　8.y=cotx y'=-1/sin^2x
+　　9.y=arcsinx y'=1/√1-x^2
+　　10.y=arccosx y'=-1/√1-x^2
+　　11.y=arctanx y'=1/1+x^2
+　　12.y=arccotx y'=-1/1+x^2
+　　在推导的过程中有这几个常见的公式需要用到：
+　　1.y=f[g(x)],y'=f'[g(x)]•g'(x)『f'[g(x)]中g(x）看作整个变量,而g'(x)中把x看作变量』
+　　2.y=u/v,y'=u'v-uv'/v^2
+　　3.y=f(x)的反函数是x=g(y）,则有y'=1/x'
+　　证：1.显而易见,y=c是一条平行于x轴的直线,所以处处的切线都是平行于x的,故斜率为0.用导数的定义做也是一样的：y=c,⊿y=c-c=0,lim⊿x→0⊿y/⊿x=0.
+　　2.这个的推导暂且不证,因为如果根据导数的定义来推导的话就不能推广到n为任意实数的一般情况.在得到 y=e^x y'=e^x和y=lnx y'=1/x这两个结果后能用复合函数的求导给予证明.
+　　3.y=a^x,
+　　⊿y=a^(x+⊿x)-a^x=a^x(a^⊿x-1)
+　　⊿y/⊿x=a^x(a^⊿x-1)/⊿x
+　　如果直接令⊿x→0,是不能导出导函数的,必须设一个辅助的函数β＝a^⊿x-1通过换元进行计算.由设的辅助函数可以知道：⊿x=loga(1+β).
+　　所以(a^⊿x-1)/⊿x＝β/loga(1+β)=1/loga(1+β)^1/β
+　　显然,当⊿x→0时,β也是趋向于0的.而limβ→0(1+β)^1/β=e,所以limβ→01/loga(1+β)^1/β=1/logae=lna.
+　　把这个结果代入lim⊿x→0⊿y/⊿x=lim⊿x→0a^x(a^⊿x-1)/⊿x后得到lim⊿x→0⊿y/⊿x=a^xlna.
+　　可以知道,当a=e时有y=e^x y'=e^x.
+　　4.y=logax
+　　⊿y=loga(x+⊿x)-logax=loga(x+⊿x)/x=loga[(1+⊿x/x)^x]/x
+　　⊿y/⊿x=loga[(1+⊿x/x)^(x/⊿x)]/x
+　　因为当⊿x→0时,⊿x/x趋向于0而x/⊿x趋向于∞,所以lim⊿x→0loga(1+⊿x/x)^(x/⊿x)＝logae,所以有
+　　lim⊿x→0⊿y/⊿x＝logae/x.
+　　可以知道,当a=e时有y=lnx y'=1/x.
+　　这时可以进行y=x^n y'=nx^(n-1)的推导了.因为y=x^n,所以y=e^ln(x^n)=e^nlnx,
+　　所以y'=e^nlnx•(nlnx)'=x^n•n/x=nx^(n-1).
+　　5.y=sinx
+　　⊿y=sin(x+⊿x)-sinx=2cos(x+⊿x/2)sin(⊿x/2)
+　　⊿y/⊿x=2cos(x+⊿x/2)sin(⊿x/2)/⊿x=cos(x+⊿x/2)sin(⊿x/2)/(⊿x/2)
+　　所以lim⊿x→0⊿y/⊿x=lim⊿x→0cos(x+⊿x/2)•lim⊿x→0sin(⊿x/2)/(⊿x/2)=cosx
+　　6.类似地,可以导出y=cosx y'=-sinx.
+　　7.y=tanx=sinx/cosx
+　　y'=[(sinx)'cosx-sinx(cos)']/cos^2x=(cos^2x+sin^2x)/cos^2x=1/cos^2x
+　　8.y=cotx=cosx/sinx
+　　y'=[(cosx)'sinx-cosx(sinx)']/sin^2x=-1/sin^2x
+　　9.y=arcsinx
+　　x=siny
+　　x'=cosy
+　　y'=1/x'=1/cosy=1/√1-sin^2y=1/√1-x^2
+　　10.y=arccosx
+　　x=cosy
+　　x'=-siny
+　　y'=1/x'=-1/siny=-1/√1-cos^2y=-1/√1-x^2
+　　11.y=arctanx
+　　x=tany
+　　x'=1/cos^2y
+　　y'=1/x'=cos^2y=1/sec^2y=1/1+tan^2x=1/1+x^2
+　　12.y=arccotx
+　　x=coty
+　　x'=-1/sin^2y
+　　y'=1/x'=-sin^2y=-1/csc^2y=-1/1+cot^2y=-1/1+x^2
+　　另外在对双曲函数shx,chx,thx等以及反双曲函数arshx,archx,arthx等和其他较复杂的复合函数求导时通过查阅导数表和运用开头的公式与
+　　4.y=u土v,y'=u'土v'
+　　5.y=uv,y=u'v+uv'
+　　均能较快捷地求得结果.
